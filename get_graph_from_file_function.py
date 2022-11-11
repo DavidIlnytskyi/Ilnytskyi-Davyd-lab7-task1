@@ -4,6 +4,7 @@ def get_graph_from_file(file: str) -> list:
     list_graphs = []
     file_content = open(file)
     graphs = [list(row.strip().split(",")) for row in file_content]
+    file_content.close()
     i = 0
     for element in graphs: 
         list_graphs.append([])
