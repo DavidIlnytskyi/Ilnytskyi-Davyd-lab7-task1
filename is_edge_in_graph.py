@@ -22,5 +22,3 @@ def is_edge_in_graph(graph, edge):
         return True
     else:
         return False
-import doctest
-doctest.testmod()
