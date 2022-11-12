@@ -1,5 +1,7 @@
 def convert_to_dot(graph):
-    """This function writes a graph into a .dot file
+    """
+    (dict) -> (None)
+    Save the graph to a file in a DOT format.
     >>> convert_to_dot(123)
 
     """

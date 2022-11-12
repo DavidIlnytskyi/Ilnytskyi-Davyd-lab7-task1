@@ -1,9 +1,13 @@
 def del_node(graph, node):
-    """This function deletes special node from a graph
+    """
+    (dict, int) -> (dict)
+    This function deletes special node from a graph
     >>> del_node({1: [2, 5], 3: [4], 2: [1], 4: [3], 5: [1, 2]}, 1)
     {3: [4], 2: [], 4: [3], 5: [2]}
     >>> del_node({1: [2, 5], 3: [4], 2: [1], 4: [3], 5: [1, 2]}, "hello")
     {1: [2, 5], 3: [4], 2: [1], 4: [3], 5: [1, 2]}
+    >>> del_node({1: [2, 5], 2: [1, 4], 3: [4], 4: [2, 3], 5: [1]}, 4)
+    {1: [2, 5], 2: [1], 3: [], 5: [1]}
     """
     if isinstance(node, int) is False:
         return graph
