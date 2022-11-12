@@ -5,7 +5,9 @@ def del_edge(graph, edge):
     >>> del_edge({1: [2, 5], 3: [4], 2: [1], 4: [3], 5: [1, 2]}, 123)
 
     """
-    if isinstance(edge, list) is False: 
+    if isinstance(edge, list) is False:
+        return None
+    elif isinstance(graph, dict) is False:
         return None
     if edge[0] in graph:
         if edge[1] in graph[edge[0]]:
@@ -14,5 +16,3 @@ def del_edge(graph, edge):
         if edge[0] in graph[edge[1]]:
             graph[edge[1]].remove(edge[0])
     return graph
-import doctest
-doctest.testmod()
