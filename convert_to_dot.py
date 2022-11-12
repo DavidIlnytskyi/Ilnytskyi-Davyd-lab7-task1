@@ -3,7 +3,7 @@ def convert_to_dot(graph):
     >>> convert_to_dot(123)
 
     """
-    if isinstance(graph, dict) is False: 
+    if isinstance(graph, dict) is False:
         return None
     connections = []
     for element in graph.items():
