@@ -10,9 +10,8 @@ def convert_to_dot(graph):
         for value in element[1]:
             connections.append(f"{element[0]} -- {value}")
     dot_file = open ("graph.dot", "w", encoding = "utf-8")
+    dot_file.write("graph {\n")
     for connect in connections:
         dot_file.write(connect + "\n")
+    dot_file.write("}")
     dot_file.close()
-    
-import doctest 
-doctest.testmod()
